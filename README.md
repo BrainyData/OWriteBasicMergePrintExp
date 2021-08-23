@@ -9,9 +9,9 @@ If you do not have them, demo versions of our external components are available 
 Please refer to the online documentation for further information.
 https://www.brainydata.com/supportpublic/documentation.htm
 
-## Contents of src
+## Contents
 
-### OWriteBasicMergePrintExp
+### /src/OWriteBasicMergePrintExp
 
 This folder contains the JSON source files for the Omnis library in Github.
 
@@ -27,6 +27,6 @@ Contains the example classes for implementing interactive spell checking.
 
 Contains the oWrite editor interface example classes for editing, merging, printing and exporting oWrite documents.
 
-## Contents of lib
+### /lib
 
 The example library in binary format plus some additional support files. further support files are required which can be downloaded from the links above.
