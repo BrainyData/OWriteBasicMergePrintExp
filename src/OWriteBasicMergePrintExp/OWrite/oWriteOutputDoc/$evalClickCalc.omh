@@ -1,0 +1,27 @@
+# we overide this method  for the purpose of exporting to HTML so we can resolve links
+#
+Switch ivExportFormat
+	Case 'html'
+		If (pColumnType='web')
+			# simply return the url from our database field as an href tag
+			Quit method con('<a href="',[pTableName].[pColumnName],'">')
+		Else If (pColumnType='mail')
+			# return the mail address from our database field and prefix with mailto:
+			Quit method con('<a href="mailto:',[pTableName].[pColumnName],'">')
+		Else If (pColumnType='file')
+			# simply return name to the file as an url, but we must copy the file from the sample folder to the destination export folder
+			Calculate lvFileName as con([pTableName].[pColumnName])
+			Calculate lvFromPath as con(tvExamplesPath,"sample_files",sys(9),lvFileName)
+			Calculate lvToPath as con(ivExportFolder,sys(9),lvFileName)
+			Do FileOps.$deletefile(lvToPath)
+			Do FileOps.$copyfile(lvFromPath,lvToPath)
+			Quit method con('<a href="./',[pTableName].[pColumnName],'">')
+		End If
+	Case 'rtf','text'
+		# currently not supported
+		Quit method ''
+	Default
+		# if we are not exporting we must be evaluating so call the super class to evaluate the table column
+		Do inherited Returns lvResult
+		Quit method lvResult
+End Switch

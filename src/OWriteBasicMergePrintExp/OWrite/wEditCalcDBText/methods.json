@@ -1,0 +1,214 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+			{
+				"name": "pOWriteRef",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pIsInsert",
+				"order": 2,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2,
+				"desc": "if kTrue, we are to insert a new calculation"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "loadCalc",
+		"order": 3,
+		"pvardefs": [
+			{
+				"name": "pIsInsert",
+				"order": 1,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1,
+				"initval": "kFalse"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "insertCalc",
+		"order": 4,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "saveCalc",
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "clickCalc",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10000
+			},
+			{
+				"name": "dataCalc",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10000,
+				"initval": "\"$cinst.$evalDataCalc()\""
+			}
+		]
+	},
+	{
+		"name": "deleteCalc",
+		"order": 6,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "loadPickLists",
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "tableChanged",
+		"order": 8,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "columnChanged",
+		"order": 9,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "updateNames",
+		"order": 10,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$evalDataCalc",
+		"order": 11,
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 1
+			},
+			{
+				"name": "pColumnName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 2
+			},
+			{
+				"name": "pColumnType",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 5,
+				"param": 3
+			},
+			{
+				"name": "pFormatting",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$evalClickCalc",
+		"order": 12,
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 1
+			},
+			{
+				"name": "pColumnName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 2
+			},
+			{
+				"name": "pColumnType",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 5,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

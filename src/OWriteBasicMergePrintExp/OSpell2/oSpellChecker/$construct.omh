@@ -1,0 +1,4 @@
+
+Calculate ivLangLexPath as con(tvExamplesPath,'LANG_LEX',sys(9))
+Calculate ivUserLexPath as con(tvExamplesPath,'USER_LEX',sys(9))
+Calculate ivOptionsFile as con(tvExamplesPath,'ospell2.cfg')

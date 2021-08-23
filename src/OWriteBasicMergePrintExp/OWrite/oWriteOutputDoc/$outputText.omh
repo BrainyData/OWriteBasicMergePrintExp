@@ -1,0 +1,43 @@
+# output utf16 text to a file on disk
+Do FileOps.$putfilename(lvFilePath,"Please choose a destination file name") Returns #F
+If flag false
+	Quit method kFalse
+End If
+
+# prepare document
+If pRefOWrite
+	# because we do not want to adversaly effect the document in the window and we may need to evaluate the document, we load the document into ourselfs and re-evaluate with the current data. Re-evaluating underlies the assumption that the object used by the window object to merge data is the same object used for generating the output (these examples use tvOWriteEvalObj throughout).
+	Do pRefOWrite.$savedata(lvDocData,kWriFmtDefault,kFalse)
+	Do $cinst.$loaddata(lvDocData)
+	# is original document evaluated? if not, are we being asked to evaluate?
+	Calculate lvDoEval as pick(pRefOWrite.$evalcalcs,ivOptMergeOnOutput,kTrue)
+Else
+	# is original document evaluated? if not, are we being asked to evaluate?
+	Calculate lvDoEval as pick($cinst.$evalcalcs,ivOptMergeOnOutput,kTrue)
+End If
+
+# evaluate/re-evaluate document if needed (saving and loading can upset evaluated documents)
+Calculate $cinst.$evallocal as kTrue ## makes sure any $owrite_export as well as $evalDataCalc calls are local to $cinst (rquired for object class instances)
+If lvDoEval
+	Do $cinst.$evalcalcs.$assign(kTrue)
+End If
+
+# save to HTML (saving to html may cause calls to the method $cinst.$owrite_export for images and urls which we need to handle individually)
+Calculate ivExportFormat as "text" ## used by our $evalClickCalc method
+Do $cinst.$savedata(lvTextData,kWriFmtText,kTrue,kWriTextFmtUTF16,kTrue)
+Calculate ivExportFormat as ""
+
+# write doc data to file on disc
+Do FileOps.$deletefile(lvFilePath) ## we ignore the return paramter here
+Do lvFileObj.$createfile(lvFilePath) Returns #F
+If flag true
+	Do lvFileObj.$writefile(lvTextData) Returns #F
+	If flag true
+		Do lvFileObj.$closefile()
+		Quit method kTrue
+	End If
+End If
+
+# if we get here there was an error
+OK message There was an error writing the RTF file
+Quit method kFalse

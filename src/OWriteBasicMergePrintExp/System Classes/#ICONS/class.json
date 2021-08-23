@@ -1,0 +1,123 @@
+{
+	"classtype": "kSystemtable",
+	"omnisversion": "10.2",
+	"internalversion": 73,
+	"iconversion": 12,
+	"nextident": 1,
+	"properties": {
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2007-01-19 07:37:11",
+		"desc": "",
+		"external": false,
+		"moddate": "2021-07-22 07:36:48",
+		"showascheckedout": false,
+		"userinfo": "",
+		"vcsrevision": 0,
+		"version": ""
+	},
+	"iconids": [
+		{
+			"iconid": 10001,
+			"pageid": 1,
+			"iconpos": 1,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10002,
+			"pageid": 1,
+			"iconpos": 2,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10003,
+			"pageid": 1,
+			"iconpos": 3,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10004,
+			"pageid": 1,
+			"iconpos": 4,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10005,
+			"pageid": 1,
+			"iconpos": 5,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10006,
+			"pageid": 1,
+			"iconpos": 6,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10007,
+			"pageid": 1,
+			"iconpos": 7,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10008,
+			"pageid": 1,
+			"iconpos": 8,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10009,
+			"pageid": 1,
+			"iconpos": 9,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10010,
+			"pageid": 1,
+			"iconpos": 10,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10011,
+			"pageid": 1,
+			"iconpos": 11,
+			"defaultsize": 1,
+			"flags": 0
+		},
+		{
+			"iconid": 10012,
+			"pageid": 1,
+			"iconpos": 12,
+			"defaultsize": 1,
+			"flags": 0
+		}
+	],
+	"pages": [
+		{
+			"pageid": 1,
+			"name": "InsertButtons",
+			"bitmapid": 1,
+			"flags": 1796
+		}
+	],
+	"bitmaps": [
+		{
+			"bitmapid": 1,
+			"solid": {
+				"$png": "solid1.png"
+			},
+			"alpha": {
+				"$png": "alpha1.png"
+			}
+		}
+	]
+}

@@ -1,0 +1,52 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+			{
+				"name": "pOSpellObj",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$setmenu",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pAskWindow",
+				"order": 2,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "windowRef",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

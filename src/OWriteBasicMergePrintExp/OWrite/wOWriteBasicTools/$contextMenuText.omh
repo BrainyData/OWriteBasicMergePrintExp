@@ -1,0 +1,10 @@
+# context click on text
+
+# if we have some selected text we want to create a field from selection
+# otherwise we present user with basic options
+If refOWrite.$firstsel<>refOWrite.$lastsel
+	Do refOWrite.$savedata(lvSelection,kWriFmtText,kFalse,kWriSaveSelection,kTrue)
+	#OK message selection=[lvSelection]
+Else
+	
+End If

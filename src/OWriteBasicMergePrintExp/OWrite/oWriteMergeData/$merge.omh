@@ -1,0 +1,8 @@
+# merge data provided by $cinst with loaded document
+If pRefOWrite
+	Calculate pRefOWrite.$evallocal as kTrue ## must always evaluate local to this
+	Calculate pRefOWrite.$evalcalcs as pMergeOn
+Else
+	Calculate $cinst.$evallocal as kTrue ## must always evaluate local to this
+	Calculate $cinst.$evalcalcs as pMergeOn
+End If

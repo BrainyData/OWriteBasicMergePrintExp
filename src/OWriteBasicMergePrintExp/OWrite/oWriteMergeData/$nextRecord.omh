@@ -1,0 +1,7 @@
+# navigate our result lists based on ivLastTable (see $evalDataCalc)
+If [ivLastTable].$line<[ivLastTable].$linecount
+	Calculate [ivLastTable].$line as [ivLastTable].$line+1
+	Calculate pRefOWrite.$evalcalcs as kTrue
+Else
+	Sound bell
+End If

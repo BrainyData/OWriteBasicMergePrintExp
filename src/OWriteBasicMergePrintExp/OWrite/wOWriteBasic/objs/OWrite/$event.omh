@@ -1,0 +1,12 @@
+On evFormatChanged
+	Do refOWriteTools.$redrawTools
+On evStylesChanged
+	Do refOWriteTools.$loadStyleList
+On evContextSpell
+	Do refOWriteTools.$contextMenuSpell(pList,pX,pY)
+On evContextText
+	Do refOWriteTools.$contextMenuText(pX,pY)
+On evContextObject
+	If $cfield.$curobjtype=kWriObjTypeCalc
+		Open window instance wEditCalcDBText ($cfield(),kFalse)
+	End If

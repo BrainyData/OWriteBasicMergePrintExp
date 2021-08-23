@@ -1,0 +1,4 @@
+# update display and internal names based on table and column names
+Calculate cvDataDisplay as con(cvDataTableName,'.',cvDataColumnName)
+Calculate cvDataInternalName as con(cvDataTableName,'_',cvDataColumnName)
+Redraw editDisplay,editInternalName

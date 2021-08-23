@@ -1,0 +1,427 @@
+[
+	{
+		"name": "$ === oWriteOutputDoc ===",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$ --- doc output options ---",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$optmergeonoutput",
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$optmergeonoutput.$assign",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pValue",
+				"order": 1,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$ --- doc output methods ---",
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$owrite_export",
+		"order": 6,
+		"pvardefs": [
+			{
+				"name": "pExpFormat",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 1,
+				"desc": "Currently only 'html'"
+			},
+			{
+				"name": "pExpType",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2,
+				"desc": "Either 'href' or 'src'"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvFileName",
+				"order": 8,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvFileObj",
+				"order": 7,
+				"type": "kObject",
+				"subtype": ".FileOps.FileOps",
+				"sublen": 0
+			},
+			{
+				"name": "lvFilePath",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvPictData",
+				"order": 4,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvPictFormat",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$outputPDF",
+		"order": 7,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pShowJobSetup",
+				"order": 2,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2,
+				"initval": "kFalse"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 5,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvDoEval",
+				"order": 6,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$outputPrinter",
+		"order": 8,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pShowJobSetup",
+				"order": 2,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2,
+				"initval": "kFalse"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 3,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvDoEval",
+				"order": 4,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$outputHTML",
+		"order": 9,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 7,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvDoEval",
+				"order": 8,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lvFileObj",
+				"order": 4,
+				"type": "kObject",
+				"subtype": ".FileOps.FileOps",
+				"sublen": 0
+			},
+			{
+				"name": "lvFilePath",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000,
+				"initval": "con(ivExportFolder,sys(9),\"index.html\")"
+			},
+			{
+				"name": "lvHtmlData",
+				"order": 2,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$outputRTF",
+		"order": 10,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 3,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvDoEval",
+				"order": 4,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lvFileObj",
+				"order": 7,
+				"type": "kObject",
+				"subtype": ".FileOps.FileOps",
+				"sublen": 0
+			},
+			{
+				"name": "lvFilePath",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'untitled.rtf'"
+			},
+			{
+				"name": "lvRtfData",
+				"order": 5,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$outputText",
+		"order": 11,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 3,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvDoEval",
+				"order": 4,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lvFileObj",
+				"order": 6,
+				"type": "kObject",
+				"subtype": ".FileOps.FileOps",
+				"sublen": 0
+			},
+			{
+				"name": "lvFilePath",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"initval": "'untitled.txt'"
+			},
+			{
+				"name": "lvTextData",
+				"order": 5,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$ --- overidden ---",
+		"order": 12,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$evalClickCalc",
+		"order": 13,
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 1
+			},
+			{
+				"name": "pColumnName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 2
+			},
+			{
+				"name": "pColumnType",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvFileName",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvFromPath",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvResult",
+				"order": 7,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvToPath",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	}
+]

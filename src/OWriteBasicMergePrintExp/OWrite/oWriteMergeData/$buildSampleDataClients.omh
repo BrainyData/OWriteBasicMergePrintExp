@@ -1,0 +1,5 @@
+Do CLIENTS.$define(SEQ,TITLE,FIRST_NAME,LAST_NAME,DOB,EMAIL,WEBSITE,PORTFOLIO)
+Do CLIENTS.$add(1001,"Mr.","Michael","Monschau","10 JAN 2000","michael@brainydata.co.uk","https://www.brainydata.com","portfolio_1001.pdf")
+Do CLIENTS.$add(1002,"Mrs.","Jane","Doe","15 FEB 1998","jane@doe.com","https://www.omnis.net","portfolio_1002.pdf")
+Do CLIENTS.$add(1003,"Mr.","John","Doe","18 March 1995","john@doe.com","https://www.nyskogames.com","portfolio_1003.pdf")
+Do CLIENTS.$line.$assign(1)

@@ -1,0 +1,7 @@
+# called when the column name is changed
+Calculate cvDataColumnName as cvPickListColumnNames.C1
+Calculate cvDataColumnType as cvPickListColumnNames.C2
+Redraw comboColumnNames
+
+# update display and internal names
+Do method updateNames

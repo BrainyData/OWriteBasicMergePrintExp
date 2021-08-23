@@ -1,0 +1,2 @@
+# save our document data between sessions
+Do $cinst.$saveSampleDocument()

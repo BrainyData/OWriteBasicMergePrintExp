@@ -1,0 +1,11 @@
+# called by oWrite during the data merging process for each calculated field that references $cinst.$evalDataCalc(...) from its $curobjcalc property
+Calculate ivLastTable as pTableName
+# ^^^ we use ivLastTable as an indication for which table we want to navigate when we receive next and prev calls (may not be a perfect solution but works for these examples, the rest is up to you)
+
+# we simply return the data for our referenced field (formtted if so requested) to oWrite
+# WARNING !!! WARNING!!! do not attempt to set breakpoints in this method as debugging a method called by an external using notation may still not be save
+If len(pFormatting)
+	Quit method jst([pTableName].[pColumnName],pFormatting)
+Else
+	Quit method [pTableName].[pColumnName]
+End If

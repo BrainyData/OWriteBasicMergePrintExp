@@ -1,0 +1,7 @@
+# save document data to disk file
+Calculate lvPath as con(tvExamplesPath,tvExamplesName,".wri")
+Do refOWrite.$savedata(lvDocData)
+Do FileOps.$deletefile(lvPath)
+Do lvFileObj.$createfile(lvPath)
+Do lvFileObj.$writefile(lvDocData)
+Do lvFileObj.$close()

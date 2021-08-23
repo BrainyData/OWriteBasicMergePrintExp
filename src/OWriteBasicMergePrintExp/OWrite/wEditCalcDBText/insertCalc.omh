@@ -1,0 +1,5 @@
+# insert a new field
+# we will insert a blank field and then edit the fields properties
+
+Do ivOWriteRef.$::insert(kWriObjTypeCalc,"<unassigned>;")
+Do method loadCalc (kTrue)

@@ -1,0 +1,2 @@
+On evClick ## Event Parameters - pRow( Itemreference )
+	Do $ctask.tvOWriteEvalObj.$outputRTF(refOWrite)

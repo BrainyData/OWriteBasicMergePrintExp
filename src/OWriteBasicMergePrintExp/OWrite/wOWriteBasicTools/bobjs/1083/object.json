@@ -1,0 +1,30 @@
+{
+	"ident": 1083,
+	"order": 16385,
+	"objtype": "kLabel",
+	"properties": {
+		"align": "kRightJst",
+		"backcolor": "RGBA(kColorBackFill,255)",
+		"backpattern": 15,
+		"bordercolor": "RGBA(0,0,0,255)",
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"effect": "kBorderNone",
+		"fieldstyle": "CtrlLabel",
+		"font": 5,
+		"fontsize": 0,
+		"fontstyle": "kPlain",
+		"forecolor": "RGBA(kColorForeFill,255)",
+		"height": 19,
+		"left": 208,
+		"linestyle": 1,
+		"objlink": 196609,
+		"text": "Merging:",
+		"textcolor": "kColorWindowText",
+		"top": 11,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 60
+	}
+}

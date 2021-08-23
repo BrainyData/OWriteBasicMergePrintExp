@@ -1,0 +1,36 @@
+# a modern oWrite calculated field consists of a number of properties
+#
+# 1. $curobjcalc: the Omnis calculation to execute when evaluating a document
+# 2. $curobjname: the custom oWrite field name that can be used to identofy your calculated field
+# 3. $curobjdisplay: the display text that is shown when the field is not evaluated
+# 4. $curobjtooltip: the fields tooltip text
+# in addition, the field may have a calculation for click actions
+# 5. $curobjclickcalc: the Omnis calculation  to be executed when the field is clicked
+
+# we do not want to expose the actual calculations to our users so we will manually evaluate the calculations
+# which will call our own methods to extract the parameters.
+
+# we support the following calculations for our calcluated fields
+# $cinst.$evalDataCalc('table_name','column_name',column_type','formatting')
+#     and
+# $cinst.$evalClickCalc('table_name','column_name',column_type')
+
+# executing the following lines will populate ivDataTableName, ivDataColumnName, ivDataColumnType and ivDataFormatting
+If len(ivOWriteRef.$curobjcalc)
+	Do eval(ivOWriteRef.$curobjcalc)
+End If
+
+# get other items directly
+Calculate cvDataDisplay as ivOWriteRef.$curobjdisplay
+Calculate cvDataInternalName as ivOWriteRef.$curobjname
+Calculate cvDataTooltip as ivOWriteRef.$curobjtooltip
+
+If len(cvDataTableName)
+	Do cvPickListTableNames.$search($ref.C1=cvDataTableName,kTrue,kFalse,kFalse,kFalse) Returns cvPickListTableNames.$line
+End If
+If cvPickListTableNames.$line=0
+	Calculate cvPickListTableNames.$line as 1
+End If
+
+Do method tableChanged ## this loads the column name based on table and ivDataColumnName
+Calculate ivIsInsert as pIsInsert

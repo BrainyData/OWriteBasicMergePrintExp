@@ -1,0 +1,74 @@
+{
+	"classtype": "kTask",
+	"omnisversion": "10.2",
+	"internalversion": 14,
+	"tvardefs": [
+		{
+			"name": "OWRITE_TMP_VAR",
+			"order": 6,
+			"type": "kBinary",
+			"subtype": 0,
+			"sublen": 100000000,
+			"desc": "this field is required by oWrite to deal with images (copy and paste RTF and HTML export/import, etc)"
+		},
+		{
+			"name": "tvExamplesName",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "tvExamplesPath",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "tvOSpellHandler",
+			"order": 1,
+			"type": "kObject",
+			"subtype": "oSpellHandler",
+			"sublen": 0
+		},
+		{
+			"name": "tvOSpellObj",
+			"order": 2,
+			"type": "kObject",
+			"subtype": "oSpellChecker",
+			"sublen": 0
+		},
+		{
+			"name": "tvOWriteEvalObj",
+			"order": 3,
+			"type": "kObject",
+			"subtype": "oWriteOutputDoc",
+			"sublen": 0,
+			"desc": "use more versatile oWrite object for merging of data"
+		}
+	],
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+
+	],
+	"properties": {
+		"canremotedebugwhenlocked": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2007-01-19 07:37:11",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": false,
+		"issupercomponent": false,
+		"moddate": "2021-07-19 19:12:10",
+		"showascheckedout": false,
+		"userinfo": "",
+		"vcsrevision": 0,
+		"version": ""
+	}
+}

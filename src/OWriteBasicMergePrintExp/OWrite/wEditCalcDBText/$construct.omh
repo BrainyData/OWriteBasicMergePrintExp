@@ -1,0 +1,22 @@
+# a modern oWrite calculated field that is linked to a DB column consists of three to four properties
+# 1. $curobjcalc: the Omnis calculation to execute when evaluating a document
+# 2. $curobjname: the custom oWrite field name that can be used to identofy your calculated field
+# 3. $curobjdisplay: the display text that is shown when the field is not evaluated
+# in addition, the field may have a calculation for click actions
+# 4. $curobjclickcalc: the Omnis calculation  to be executed when the field is clicked
+# this class provides an intuitive interface for editing these four elements
+
+# prepare our pick lists
+Do method loadPickLists
+
+# load the properties of an existing calculation for editing
+# or
+# insert a new calculation with default values and then load for editing
+If pOWriteRef.$ident
+	Set reference ivOWriteRef to pOWriteRef
+	If pIsInsert
+		Do method insertCalc
+	Else
+		Do method loadCalc
+	End If
+End If

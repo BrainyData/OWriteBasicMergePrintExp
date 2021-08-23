@@ -1,0 +1,3 @@
+# intialize the spell checker to enable the background and interactive spell check
+Do tvOSpellObj.$init ## initialize the spell checker object
+Do ivSpllSession.$init(refOWrite) ## initialize the OWrite spell session

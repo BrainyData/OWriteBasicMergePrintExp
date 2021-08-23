@@ -1,0 +1,161 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+			{
+				"name": "pOSpellObj",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$event",
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$prompt",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pSession",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pTitle",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			},
+			{
+				"name": "pSpllResult",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 3
+			},
+			{
+				"name": "pCanceled",
+				"order": 3,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$iscancel",
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "setSentence",
+		"order": 6,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "setSuggestions",
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "setPrompt",
+		"order": 8,
+		"pvardefs": [
+			{
+				"name": "pMode",
+				"order": 1,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "setButtonMode",
+		"order": 9,
+		"pvardefs": [
+			{
+				"name": "pMode",
+				"order": 1,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "doAction",
+		"order": 10,
+		"pvardefs": [
+			{
+				"name": "pAction",
+				"order": 1,
+				"type": "kInteger",
+				"subtype": "kShortint",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	}
+]

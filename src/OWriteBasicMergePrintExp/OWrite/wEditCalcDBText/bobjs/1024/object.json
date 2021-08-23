@@ -1,0 +1,30 @@
+{
+	"ident": 1024,
+	"order": 16387,
+	"objtype": "kBackComponent",
+	"componentlib": "StringTable",
+	"componentctrl": "String Label",
+	"properties": {
+		"::text": "Formatting:",
+		"align": "kRightJst",
+		"backcolor": "kColorWindow",
+		"backpattern": 1,
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"fieldstyle": "CtrlLabel",
+		"font": 1,
+		"fontsize": 8,
+		"fontstyle": "kPlain",
+		"forecolor": "kBlack",
+		"height": 13,
+		"left": 275,
+		"objlink": 0,
+		"rowid": "",
+		"textcolor": "kColorWindowText",
+		"top": 49,
+		"userinfo": "",
+		"vertcentertext": false,
+		"visible": true,
+		"width": 80
+	}
+}

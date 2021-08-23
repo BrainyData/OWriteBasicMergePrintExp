@@ -1,0 +1,14 @@
+# update our combo variables
+Calculate ivStyleName as refOWrite.$curstyleName
+Calculate ivFontName as refOWrite.$curfont
+Calculate ivFontSize as refOWrite.$curfontsize
+Calculate ivEvalCalcs as refOWrite.$evalcalcs
+Calculate ivAlign as refOWrite.$curalign
+# redraw everything
+Do $cinst.$redraw()
+# enabel/disable ceratin fields
+If refOWrite.$evalcalcs
+	Enable fields btnNext,btnPrevious
+Else
+	Disable fields btnNext,btnPrevious
+End If

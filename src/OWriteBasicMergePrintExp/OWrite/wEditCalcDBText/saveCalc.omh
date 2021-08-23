@@ -1,0 +1,24 @@
+# apply our settings to the current object
+
+# save data calculation
+Begin text block
+Text:$cinst.$evalDataCalc('[cvDataTableName]','[cvDataColumnName]','[cvDataColumnType]','[cvDataFormatting]')
+End text block
+Get text block dataCalc
+Calculate ivOWriteRef.$curobjcalc as dataCalc
+
+# save click calculation (if we have one)
+Begin text block
+Switch cvDataColumnType
+	Case 'web','mail','file'
+		Text:$cinst.$evalClickCalc('[cvDataTableName]','[cvDataColumnName]','[cvDataColumnType]')
+End Switch
+End text block
+Get text block clickCalc
+Calculate ivOWriteRef.$curobjclickcalc as clickCalc ## assign our click calculation (may be empty)
+Calculate ivOWriteRef.$curobjclicks as len(clickCalc)>0 ## turn on clicking if we have a click calculation
+
+# save anything else
+Calculate ivOWriteRef.$curobjdisplay as cvDataDisplay
+Calculate ivOWriteRef.$curobjname as cvDataInternalName
+Calculate ivOWriteRef.$curobjtooltip as cvDataTooltip

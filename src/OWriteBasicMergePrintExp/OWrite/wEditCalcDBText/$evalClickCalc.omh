@@ -1,0 +1,12 @@
+Quit method
+Calculate cvDataTableName as pTableName
+Calculate cvDataColumnName as pColumnName
+
+# must load formatting description
+Do cvPickListFormatting.$search($ref.C2=cvDataFormatting,kTrue,kFalse,kFalse,kFalse) Returns cvPickListFormatting.$line
+If not(cvPickListFormatting.$line)
+	Calculate cvPickListFormatting.$line as 1
+End If
+Calculate cvDataFormattingDesc as cvPickListFormatting.C1
+
+Redraw comboTableName,comboColumnNames,comboFormatting

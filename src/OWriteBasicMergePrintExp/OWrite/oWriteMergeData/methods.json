@@ -1,0 +1,431 @@
+[
+	{
+		"name": "$ === oWriteMergeData ===",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$construct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$ --- init ---",
+		"order": 4,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$getSampleDataPickLists",
+		"order": 5,
+		"pvardefs": [
+			{
+				"name": "pOutTablesAndColmns",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pOutFormatingStrings",
+				"order": 2,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "ColumnName",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"initval": "cvNone"
+			},
+			{
+				"name": "ColumnType",
+				"order": 7,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10,
+				"initval": "''",
+				"desc": "one of "
+			},
+			{
+				"name": "Formatting",
+				"order": 8,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 15,
+				"initval": "''"
+			},
+			{
+				"name": "FormattingDesc",
+				"order": 9,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255
+			},
+			{
+				"name": "lvPickListFormatting",
+				"order": 4,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lvPickListTablesAndColumns",
+				"order": 5,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "TableColumnNames",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "TableName",
+				"order": 10,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"initval": "cvNone"
+			}
+		]
+	},
+	{
+		"name": "$buildSampleDataClients",
+		"order": 6,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "DOB",
+				"order": 4,
+				"type": "kDate",
+				"subtype": "kDatetime",
+				"sublen": 1
+			},
+			{
+				"name": "EMAIL",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255
+			},
+			{
+				"name": "FIRST_NAME",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100
+			},
+			{
+				"name": "LAST_NAME",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100
+			},
+			{
+				"name": "PORTFOLIO",
+				"order": 7,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			},
+			{
+				"name": "SEQ",
+				"order": 8,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "TITLE",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10
+			},
+			{
+				"name": "WEBSITE",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			}
+		]
+	},
+	{
+		"name": "$buildSampleDataSuppliers",
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "ACCOUNT_BALANCE",
+				"order": 4,
+				"type": "kNumber",
+				"subtype": "k2dp",
+				"sublen": 0
+			},
+			{
+				"name": "COMPANY_NAME",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100
+			},
+			{
+				"name": "CONTACT_EMAIL",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100
+			},
+			{
+				"name": "CONTACT_NAME",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100
+			},
+			{
+				"name": "SEQ",
+				"order": 5,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$ --- data merging ---",
+		"order": 8,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$merge",
+		"order": 9,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pMergeOn",
+				"order": 1,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$evalDataCalc",
+		"order": 10,
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 1
+			},
+			{
+				"name": "pColumnName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 2
+			},
+			{
+				"name": "pColumnType",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10,
+				"param": 3
+			},
+			{
+				"name": "pFormatting",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$nextRecord",
+		"order": 11,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$previousRecord",
+		"order": 12,
+		"pvardefs": [
+			{
+				"name": "pRefOWrite",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$ --- interact ---",
+		"order": 13,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$evalClickCalc",
+		"order": 14,
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 1
+			},
+			{
+				"name": "pColumnName",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 2
+			},
+			{
+				"name": "pColumnType",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lvClickData",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			},
+			{
+				"name": "lvPath",
+				"order": 11,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lvResult",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			},
+			{
+				"name": "lvScript",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			}
+		]
+	},
+	{
+		"name": "$ === OWriteDoc ===",
+		"order": 15,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	}
+]

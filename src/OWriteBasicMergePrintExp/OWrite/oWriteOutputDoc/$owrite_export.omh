@@ -1,0 +1,37 @@
+# the export callback method
+#-- this method is called by OWrite when objects need to be resolved for the given export format
+#-- we can query all relevant $curobj... properties during this call
+If pExpFormat='html' ## resolve links and images for HTML export
+	Switch pExpType
+		Case 'href'
+			# a calculated field has a click calculation: in this example it is $cinst.$evalClickCalc(table_name,column_name,column_type)
+			# we need to turn this into something suitable for HTML
+			# by evaluating the calculation our own $evalClickCalc method can extract the parameters and produce and return the HTML
+			Quit method eval($cinst.$curobjclickcalc)
+		Case 'src'
+			# we have a picture field and must write the picture data to a seperate file in the export folder, then return the name of that file to oWrite
+			# owrite will generate a src attribute with our returned file name
+			Calculate lvPictData as $cinst.$curobjresult ## $curobjresult always returns the data of the object , calculation or not
+			If binlength(lvPictData)
+				# convert the image to JPEG (or other suitable format)
+				Calculate lvPictFormat as pictformat(lvPictData)
+				If lvPictFormat<>'JPEG'&lvPictFormat<>'PNG'
+					Calculate lvPictData as OWrite.$pictconvto(lvPictFormat,lvPictData,'PNG')
+				End If
+				Calculate ivExportImgCount as ivExportImgCount+1
+				Calculate lvFileName as con("img",ivExportImgCount,".png")
+				Calculate lvFilePath as con(ivExportFolder,sys(9),lvFileName)
+				Do FileOps.$deletefile(lvFilePath) ## we ignore the return paramter here
+				Do lvFileObj.$createfile(lvFilePath) Returns #F
+				If flag true
+					Do lvFileObj.$writefile(lvPictData)
+					Do lvFileObj.$closefile()
+				End If
+				Quit method lvFileName
+			Else
+				Quit method ''
+			End If
+	End Switch
+Else If pExpFormat='rtf'|pExpFormat='text'
+	# currently not supported
+End If

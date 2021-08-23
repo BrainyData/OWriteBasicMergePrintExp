@@ -1,0 +1,23 @@
+{
+	"ident": 1102,
+	"order": 16390,
+	"objtype": "kRect3D",
+	"properties": {
+		"backcolor": "RGBA(kColorBackFill,255)",
+		"backpattern": 1,
+		"bordercolor": "RGBA(kColorFrame,255)",
+		"designactive": true,
+		"edgefloat": "kEFnone",
+		"effect": "kBorderEmbossedChisel",
+		"fieldstyle": "",
+		"forecolor": "RGBA(kColorForeFill,255)",
+		"height": 37,
+		"left": 129,
+		"linestyle": 1,
+		"objlink": 131073,
+		"top": 2,
+		"userinfo": "",
+		"visible": true,
+		"width": 4
+	}
+}

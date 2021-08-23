@@ -1,0 +1,61 @@
+{
+	"classtype": "kObjectclass",
+	"omnisversion": "10.2",
+	"internalversion": 79,
+	"superclass": ".OWrite.OWriteDoc",
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+		{
+			"name": "cvNone",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255,
+			"initval": "'<none>'"
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "CLIENTS",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0,
+			"desc": "Simulates result list for clients table"
+		},
+		{
+			"name": "ivLastTable",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255,
+			"desc": "Used as a hack to know which table to navigate for next and previous instructions (set by last $evalDataCalc call)"
+		},
+		{
+			"name": "SUPPLIERS",
+			"order": 2,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0,
+			"desc": "Simulates result list for suppliers table"
+		}
+	],
+	"properties": {
+		"canremotedebugwhenlocked": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2021-07-06 07:17:19",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2021-07-19 19:10:03",
+		"selfcontained": false,
+		"showascheckedout": false,
+		"userinfo": "",
+		"vcsrevision": 0,
+		"version": ""
+	}
+}

@@ -1,0 +1,8 @@
+# prep our pick lists for our dummy table/column names as well as click calc types
+If cvPickListTableNames.$linecount
+Else
+	Do tvOWriteEvalObj.$getSampleDataPickLists(cvPickListTableNames,cvPickListFormatting)
+	Do cvPickListColumnNames.$line.$assign(1)
+	Calculate cvPickListColumnNames as cvPickListTableNames.C2
+	Do cvPickListColumnNames.$line.$assign(1)
+End If

@@ -1,0 +1,12 @@
+On evClick
+	Process event and continue
+	Calculate cvDataFormatting as cvPickListFormatting.C2
+On evBefore
+	Calculate cvPickListFormatting.$line as 0
+On evAfter
+	If #MODIFIED&cvPickListFormatting.$line=0
+		# formating string was manually entered so we assign ivDataFormatting from the combo entry field
+		Process event and continue
+		Calculate cvDataFormatting as cvDataFormattingDesc
+		Send to trace log #MODIFIED in comboFormatting ([cvDataFormatting])
+	End If

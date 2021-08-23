@@ -1,0 +1,178 @@
+{
+	"classtype": "kWindow",
+	"omnisversion": "10.2",
+	"internalversion": 90,
+	"designtaskname": "Startup_Task",
+	"nextident": 1106,
+	"lastgroupident": 0,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "ivAlign",
+			"order": 12,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "ivEvalCalcs",
+			"order": 11,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ivFontList",
+			"order": 5,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivFontName",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivFontSize",
+			"order": 6,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "ivFontSizeList",
+			"order": 7,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivLanguageList",
+			"order": 8,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivLanguageName",
+			"order": 10,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "ivSpllSession",
+			"order": 9,
+			"type": "kObject",
+			"subtype": "oWriteSpellSession",
+			"sublen": 0
+		},
+		{
+			"name": "ivStyleList",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ivStyleName",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "refOWrite",
+			"order": 3,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0,
+			"initval": "$cinst.$container().$objs.OWrite",
+			"desc": "must initialize in this way as paged pane prematurely redraws child objects causing $dataname to become invalid"
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"backcolor": "kColor3DFace",
+		"backgroundskin": 0,
+		"backgroundskinalign": "kPALtopLeft",
+		"backgroundtheme": "kBGThemeWindow",
+		"backpattern": 0,
+		"bringinfront": false,
+		"canremotedebugwhenlocked": false,
+		"clickbehind": true,
+		"closebox": true,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2007-01-19 08:48:16",
+		"desc": "",
+		"dockingedge": "kBorderChisel",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFnone",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"enablemenuandtoolbars": true,
+		"external": true,
+		"forecolor": "kColor3DFace",
+		"growbox": true,
+		"hasmenus": false,
+		"hasstatusbar": false,
+		"height": 66,
+		"helpbutton": false,
+		"helpfile": 0,
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 0,
+		"issubwindow": false,
+		"issupercomponent": false,
+		"keepclicks": true,
+		"left": 438,
+		"menuedge": "kBorderChisel",
+		"menunames": "",
+		"minimizebox": false,
+		"minimizeiconid": 2006,
+		"moddate": "2021-07-22 07:43:34",
+		"modelessdata": true,
+		"movebehind": true,
+		"osdropflags": "kOSDROPnone",
+		"showascheckedout": false,
+		"showcommands": false,
+		"showgrid": false,
+		"showtitle": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"statusbarpos": "kSBPosBottom",
+		"statusedge": "kBorderChisel",
+		"style": "kTitle",
+		"title": "",
+		"toolbarnames": "",
+		"toolbaroptions": "kTBOptionNone",
+		"toolbarpos": "kDockingAreaNone",
+		"top": 338,
+		"userinfo": "",
+		"usesheets": false,
+		"vcsrevision": 0,
+		"version": "",
+		"vertgrid": 8,
+		"vertscroll": false,
+		"width": 783,
+		"zoombox": false
+	},
+	"statusbar": {
+		"properties": {
+			"fieldstyle": "",
+			"font": 1,
+			"fontsize": 0,
+			"helppane": 0
+		}
+	}
+}

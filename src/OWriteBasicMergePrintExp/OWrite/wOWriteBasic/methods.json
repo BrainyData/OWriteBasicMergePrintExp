@@ -1,0 +1,135 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$evalClickCalc",
+		"order": 3,
+		"pvardefs": [
+			{
+				"name": "pTableName",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 1
+			},
+			{
+				"name": "pColumnName",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 255,
+				"param": 2
+			},
+			{
+				"name": "pColumnType",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 10,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "addr",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			},
+			{
+				"name": "result",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			},
+			{
+				"name": "script",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 1000
+			}
+		]
+	},
+	{
+		"name": "$saveSampleDocument",
+		"order": 4,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 6,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvFileObj",
+				"order": 7,
+				"type": "kObject",
+				"subtype": ".FileOps.FileOps",
+				"sublen": 0
+			},
+			{
+				"name": "lvPath",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	},
+	{
+		"name": "$loadSampleDocument",
+		"order": 5,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lvDocData",
+				"order": 7,
+				"type": "kBinary",
+				"subtype": 0,
+				"sublen": 100000000
+			},
+			{
+				"name": "lvFileObj",
+				"order": 6,
+				"type": "kObject",
+				"subtype": ".FileOps.FileOps",
+				"sublen": 0
+			},
+			{
+				"name": "lvPath",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			}
+		]
+	}
+]

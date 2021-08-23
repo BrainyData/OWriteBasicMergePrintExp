@@ -1,0 +1,23 @@
+[
+	{
+		"name": "$event",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$construct",
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	}
+]

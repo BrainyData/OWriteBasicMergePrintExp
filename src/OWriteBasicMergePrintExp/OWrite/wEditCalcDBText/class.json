@@ -1,0 +1,188 @@
+{
+	"classtype": "kWindow",
+	"omnisversion": "10.2",
+	"internalversion": 83,
+	"designtaskname": "Startup_Task",
+	"nextident": 1034,
+	"lastgroupident": 0,
+	"cvardefs": [
+		{
+			"name": "cvDataColumnName",
+			"order": 6,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255
+		},
+		{
+			"name": "cvDataColumnType",
+			"order": 7,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 10,
+			"initval": "''",
+			"desc": "one of "
+		},
+		{
+			"name": "cvDataDisplay",
+			"order": 10,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255
+		},
+		{
+			"name": "cvDataFormatting",
+			"order": 9,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 15,
+			"initval": "''"
+		},
+		{
+			"name": "cvDataFormattingDesc",
+			"order": 8,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255
+		},
+		{
+			"name": "cvDataInternalName",
+			"order": 11,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255
+		},
+		{
+			"name": "cvDataTableName",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 255
+		},
+		{
+			"name": "cvDataTooltip",
+			"order": 12,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 10000
+		},
+		{
+			"name": "cvPickListColumnNames",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "cvPickListFormatting",
+			"order": 3,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "cvPickListTableNames",
+			"order": 4,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		}
+	],
+	"ivardefs": [
+		{
+			"name": "ivIsInsert",
+			"order": 9,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "ivOWriteRef",
+			"order": 1,
+			"type": "kItemref",
+			"subtype": "$libs.lib.$windows.window.$objs.owritewindowobject",
+			"sublen": 0
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"backcolor": "kColor3DFace",
+		"backgroundskin": 0,
+		"backgroundskinalign": "kPALtopLeft",
+		"backgroundtheme": "kBGThemeWindow",
+		"backpattern": 0,
+		"bringinfront": false,
+		"canremotedebugwhenlocked": false,
+		"clickbehind": false,
+		"closebox": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2021-07-05 07:00:56",
+		"desc": "",
+		"dockingedge": "kBorderChisel",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFnone",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"enablemenuandtoolbars": true,
+		"external": true,
+		"forecolor": "kColor3DFace",
+		"growbox": true,
+		"hasmenus": false,
+		"hasstatusbar": false,
+		"height": 180,
+		"helpbutton": false,
+		"helpfile": 0,
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 0,
+		"issubwindow": false,
+		"issupercomponent": false,
+		"keepclicks": true,
+		"left": 477,
+		"menuedge": "kBorderChisel",
+		"menunames": "",
+		"minimizebox": false,
+		"minimizeiconid": 2006,
+		"moddate": "2021-07-19 11:23:39",
+		"modelessdata": true,
+		"movebehind": true,
+		"osdropflags": "kOSDROPnone",
+		"showascheckedout": false,
+		"showcommands": false,
+		"showgrid": false,
+		"showtitle": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"statusbarpos": "kSBPosBottom",
+		"statusedge": "kBorderChisel",
+		"style": "kTitle",
+		"title": {
+			"type": 0,
+			"calc": "Database Column"
+		},
+		"toolbarnames": "",
+		"toolbaroptions": "kTBOptionNone",
+		"toolbarpos": "kDockingAreaNone",
+		"top": 599,
+		"userinfo": "",
+		"usesheets": false,
+		"vcsrevision": 0,
+		"version": "",
+		"vertgrid": 8,
+		"vertscroll": false,
+		"width": 507,
+		"zoombox": false
+	},
+	"statusbar": {
+		"properties": {
+			"fieldstyle": "",
+			"font": 1,
+			"fontsize": 0,
+			"helppane": 0
+		}
+	}
+}

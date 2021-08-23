@@ -1,0 +1,44 @@
+# the user clicked a clickable calculated field that references $cinst.$evalClickCalc() from its $curobjclickcalc property
+Calculate lvClickData as [pTableName].[pColumnName]
+Switch pColumnType
+	
+	Case 'web'
+		Switch sys(6)
+			Case 'X'
+				Calculate lvScript as con('property target_URL : "',lvClickData,'"',kCr,'open location target_URL')
+				Do $root.$runapplescript(lvScript,lvResult)
+			Default
+				Launch program ,[lvClickData] (Do not quit Omnis)
+		End Switch
+		
+	Case 'mail'
+		Switch sys(6)
+			Case 'X'
+				Begin text block
+				Line:tell application "Mail"
+				Line:set newMessage to make new outgoing message with properties {subject:"Hello", content:"" & return & return}
+				Line:tell newMessage
+				Line:set visible to true
+				Line:make new to recipient at end of to recipients with properties {name:"", address:"[lvClickData]"}
+				Line:end tell
+				Line:activate
+				Line:end tell
+				End text block
+				Get text block lvScript
+				Do $root.$runapplescript(lvScript,lvResult)
+			Default
+				# TO DO for windows
+		End Switch
+		
+	Case 'file'
+		Calculate lvPath as con(tvExamplesPath,"sample_files",sys(9),lvClickData)
+		Send to trace log case file: lvClickData = [lvClickData]    lvPath = [lvPath]
+		Switch sys(6)
+			Case 'X'
+				Calculate lvScript as con('set posixFile to POSIX file "',lvPath,'"',kCr,'tell application "Finder" to open posixFile')
+				Do $root.$runapplescript(lvScript,lvResult)
+			Default
+				Launch program ,[lvClickData] (Do not quit Omnis)
+		End Switch
+		
+End Switch

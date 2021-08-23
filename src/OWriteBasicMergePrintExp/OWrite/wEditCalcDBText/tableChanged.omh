@@ -1,0 +1,13 @@
+# called when the line on the table pick list has been changed
+Calculate cvDataTableName as cvPickListTableNames.C1
+Redraw comboTableName
+
+# update column name picker
+Calculate cvPickListColumnNames as cvPickListTableNames.C2
+If len(cvDataColumnName)
+	Do cvPickListColumnNames.$search($ref.C1=cvDataColumnName,kTrue,kFalse,kFalse,kFalse) Returns cvPickListColumnNames.$line
+End If
+If not(cvPickListColumnNames.$line)
+	Calculate cvPickListColumnNames.$line as 1
+End If
+Do method columnChanged

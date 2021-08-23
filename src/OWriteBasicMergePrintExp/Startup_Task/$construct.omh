@@ -1,0 +1,12 @@
+# prepare our examples path and name
+# ## the examples path and name are required by other methods
+Do FileOps.$splitpathname($clib.$pathname,_fdrive,_fdir,_fname,_fext)
+Calculate tvExamplesPath as con(_fdrive,_fdir)
+Calculate tvExamplesName as _fname
+
+# initialize OSpell2 and OWrite
+Do method construct_OSpell2
+Do method construct_OWrite
+
+# open our simple OWrite window
+Open window instance wMain/CEN

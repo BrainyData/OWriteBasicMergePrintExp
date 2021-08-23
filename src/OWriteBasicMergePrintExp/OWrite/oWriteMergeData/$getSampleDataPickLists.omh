@@ -1,0 +1,50 @@
+# return pick lists in parameters
+
+# --- prep our pick lists for our dummy table/column names ---
+Do lvPickListTablesAndColumns.$define(TableName,TableColumnNames)
+
+# add
+# Do TableColumnNames.$define(ColumnName)
+# Do TableColumnNames.$add(cvUnassigned)
+# Do TableColumnNames.$line.$assign(1)
+# Do lvPickListTableNames.$add(cvUnassigned,TableColumnNames)
+
+# add clients' column name
+Do TableColumnNames.$define(ColumnName,ColumnType)
+# Do TableColumnNames.$add(cvUnassigned,cvUnassigned)
+Do TableColumnNames.$add('TITLE','text')
+Do TableColumnNames.$add('FIRST_NAME','text')
+Do TableColumnNames.$add('LAST_NAME','text')
+Do TableColumnNames.$add('DOB','date')
+Do TableColumnNames.$add('EMAIL','mail')
+Do TableColumnNames.$add('WEBSITE','web')
+Do TableColumnNames.$add('PORTFOLIO','file')
+Do TableColumnNames.$line.$assign(1)
+Do lvPickListTablesAndColumns.$add('CLIENTS',TableColumnNames)
+
+# add suppliers' column names
+Do TableColumnNames.$define(ColumnName,ColumnType)
+# Do TableColumnNames.$add(cvUnassigned,cvUnassigned)
+Do TableColumnNames.$add('COMPANY_NAME','text')
+Do TableColumnNames.$add('CONTACT_NAME','text')
+Do TableColumnNames.$add('CONTACT_EMAIL','mail')
+Do TableColumnNames.$add('ACCOUNT_BALANCE','money')
+Do TableColumnNames.$line.$assign(1)
+Do lvPickListTablesAndColumns.$add('SUPPLIERS',TableColumnNames)
+Do lvPickListTablesAndColumns.$line.$assign(1)
+
+# --- build list of data formatting options ---
+Do lvPickListFormatting.$define(FormattingDesc,Formatting) ## formating strings are used with jst() function
+Do lvPickListFormatting.$add(cvNone,'')
+Do lvPickListFormatting.$add('ALL CAPS','U')
+Do lvPickListFormatting.$add('Captilised','C')
+Do lvPickListFormatting.$add('lower case','L')
+Do lvPickListFormatting.$add('£#,###.##','£N2,')
+Do lvPickListFormatting.$add('$#,###.##','$N2,')
+Do lvPickListFormatting.$add('DD MMM YYYY','D:D m y')
+Do lvPickListFormatting.$add('DD/MM/YYYY','D:D/M/y')
+Do lvPickListFormatting.$line.$assign(1)
+
+# --- return the lists in the paramters ---
+Calculate pOutTablesAndColmns as lvPickListTablesAndColumns
+Calculate pOutFormatingStrings as lvPickListFormatting

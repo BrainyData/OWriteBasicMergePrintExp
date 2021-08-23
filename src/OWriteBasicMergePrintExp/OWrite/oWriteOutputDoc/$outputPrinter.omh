@@ -1,0 +1,28 @@
+# print document to printer
+
+# prepare for printing
+Do $cdevice.$assign(kDevPrinter)
+
+# prepare document
+If pRefOWrite
+	# because we do not want to adversaly effect the document in the window and we may need to evaluate and re-pagenate the document, we load the document into ourselfs and re-evaluate with the current data. Re-evaluating underlies the assumption that the object used by the window object to merge data is the same object used for generating the output (these examples use tvOWriteEvalObj throughout).
+	Do pRefOWrite.$savedata(lvDocData,kWriFmtDefault,kFalse)
+	Do $cinst.$loaddata(lvDocData)
+	# is original document evaluated? if not, are we being asked to evaluate?
+	Calculate lvDoEval as pick(pRefOWrite.$evalcalcs,ivOptMergeOnOutput,kTrue)
+Else
+	# is original document evaluated? if not, are we being asked to evaluate?
+	Calculate lvDoEval as pick($cinst.$evalcalcs,ivOptMergeOnOutput,kTrue)
+End If
+
+# always print using page mode
+Do $cinst.$pageview.$assign(kWriViewPageLayout)
+
+# evaluate/re-evaluate document if needed (saving and loading can upset evaluated documents)
+If lvDoEval
+	Do $cinst.$evallocal.$assign(kTrue)
+	Do $cinst.$evalcalcs.$assign(kTrue)
+End If
+
+# now we print
+Do $cinst.$print("Example PDF Document",pShowJobSetup,kFalse,kFalse)

@@ -1,0 +1,4 @@
+On evClick
+	Process event and continue
+	Do $cinst.$redrawTools()
+	Do $ctask.tvOWriteEvalObj.$merge(refOWrite,ivEvalCalcs)

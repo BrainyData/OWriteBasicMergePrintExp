@@ -1,0 +1,3 @@
+# property assignment method
+Calculate ivOptMergeOnOutput as pValue
+Quit method kTrue ## tells caller assignment worked

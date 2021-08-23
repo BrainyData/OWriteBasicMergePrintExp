@@ -1,0 +1,4 @@
+If ivIsInsert
+	# only delete if we inserted the calc
+	Do ivOWriteRef.$editclear()
+End If

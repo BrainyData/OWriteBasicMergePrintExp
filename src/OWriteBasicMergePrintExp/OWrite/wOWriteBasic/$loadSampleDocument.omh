@@ -1,0 +1,8 @@
+# load document data from disk file
+Calculate lvPath as con(tvExamplesPath,tvExamplesName,".wri")
+If FileOps.$doesfileexist(lvPath)
+	Do lvFileObj.$openfile(lvPath)
+	Do lvFileObj.$readfile(lvDocData)
+	Do lvFileObj.$close()
+	Do refOWrite.$loaddata(lvDocData)
+End If

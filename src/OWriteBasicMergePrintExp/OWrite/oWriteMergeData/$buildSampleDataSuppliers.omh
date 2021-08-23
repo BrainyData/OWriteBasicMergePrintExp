@@ -1,0 +1,4 @@
+Do SUPPLIERS.$define(SEQ,COMPANY_NAME,CONTACT_NAME,CONTACT_EMAIL,ACCOUNT_BALANCE)
+Do SUPPLIERS.$add(2001,"Brainy Data Limited","Michael Monschau","sales@brainydata.co.uk",19200.58)
+Do SUPPLIERS.$add(2001,"Omnis Software Limited","Bobs","sales@omnis.net",5200.00)
+Do SUPPLIERS.$line.$assign(1)
