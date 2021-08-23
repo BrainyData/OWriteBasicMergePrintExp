@@ -9,6 +9,14 @@ If you do not have them, demo versions of our external components are available 
 Please refer to the online documentation for further information.
 https://www.brainydata.com/supportpublic/documentation.htm
 
+## Minimum requirements
+
+Omnis Studio 10.2
+oWrite Desktop version 5 beta 1
+pdfDevice version 4.0.0
+oSpell2 version 3.3.0
+
+
 ## Contents
 
 ### /src/OWriteBasicMergePrintExp
