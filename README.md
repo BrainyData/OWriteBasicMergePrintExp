@@ -12,9 +12,9 @@ https://www.brainydata.com/supportpublic/documentation.htm
 ## Minimum requirements
 
 Omnis Studio 10.2
-oWrite Desktop version 5 beta 1
-pdfDevice version 4.0.0
-oSpell2 version 3.3.0
+oWrite Desktop v5 beta 1
+pdfDevice v4.0.0
+oSpell2 v3.3.0
 
 
 ## Contents
